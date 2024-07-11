@@ -1,13 +1,33 @@
 {{!< default}}
 
 <main class="site-main">
-
-    <div class="post-feed gh-feed gh-canvas">
-        {{#foreach posts}}
-            {{> "loop"}}
-        {{/foreach}}
+    <div class="gh-canvas">
+        <h3 class="gh-section-title">Posts</h3>
     </div>
-
+    <div class="post-feed gh-feed gh-canvas">
+        <section class="gh-section">
+            {{#foreach posts}}
+                {{> "loop"}}
+            {{/foreach}}
+        </section>
+    </div>
     {{pagination}}
-
+    <div class="topics-feed gh-canvas">
+        {{#get "tags" include="count.posts" limit="all" as |topic|}}
+            <section class="gh-section">
+                <h3 class="gh-section-title">Topics</h3>
+                <div class="gh-topics">
+                    {{#foreach topic}}
+                        <a class="gh-topic-item" href="{{url}}">
+                            <div class="gh-topic-pill">
+                                <span>{{name}}</span>
+                                &nbsp;
+                                <span class="count">({{count.posts}})</span>
+                            </div>
+                        </a>
+                    {{/foreach}}
+                </div>
+            </section>
+        {{/get}}
+    </div>
 </main>
