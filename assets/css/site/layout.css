@@ -1,73 +1,94 @@
 .site {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 .site-content {
-    flex-grow: 1;
-    padding: 6rem 0;
+  flex-grow: 1;
+  padding: 6rem 0;
 }
 
 .page-template .site-content {
-    padding-block: 0;
+  padding-block: 0;
 }
 
 .post-feed .gh-section:not(:first-child) {
-    border-top: 1px solid var(--light-gray-color);
+  border-top: 1px solid var(--light-gray-color);
 }
 
 .topics-feed {
-    margin-top: 5rem;
+  margin-top: 5rem;
 }
 
 .gh-topic-pill {
-    padding: 0.35rem 0.75rem 0.35rem 0.75rem;
-    color: #FFF;
-    background-color: #333;
-    text-transform: lowercase;
-    border-radius: 1rem;
-    text-align: center;
-    font-size: 1.3rem;
-    line-height: 1;
-    /* border: 1px solid var(--color-light-gray); */
-    border-radius: 32px;
-    padding: 0.4rem 0.8rem;
-    display: flex;
-    align-items: center;
+  padding: 0.35rem 0.75rem 0.35rem 0.75rem;
+  border: 1px solid var(--color-light-gray);
+  color: #333;
+  text-transform: lowercase;
+  border-radius: 1rem;
+  text-align: center;
+  font-size: 1.3rem;
+  line-height: 1;
+  border-radius: 32px;
+  padding: 0.4rem 0.8rem;
+  display: flex;
+  align-items: center;
 }
+.gh-topic-pill:hover {
+  border: 1pt solid #333;
+}
+
 .gh-topic-pill .count {
-    font-size: 8pt;
+  font-size: 8pt;
+}
+
+@media (prefers-color-scheme: dark) {
+  .gh-topic-pill {
+    border: 1pt solid white;
+    color: #fff;
+  }
+  .theme-dark .gh-topic-pill:hover {
+    border: 1pt solid #eee;
+  }
+}
+
+.theme-dark .gh-topic-pill {
+  border: 1pt solid white;
+  color: #fff;
+}
+
+.theme-dark .gh-topic-pill:hover {
+  border: 1pt solid #eee;
 }
 
 .gh-topics {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
 }
 
 .gh-section-title {
-    align-items: center;
-    display: flex;
-    font-size: 1.2rem;
-    font-weight: 500;
-    letter-spacing: 0.01em;
-    margin-bottom: 2.4rem;
-    text-transform: uppercase;
+  align-items: center;
+  display: flex;
+  font-size: 1.2rem;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  margin-bottom: 2.4rem;
+  text-transform: uppercase;
 }
 
 .gh-section-title::after {
-    background-color: var(--color-light-gray);
-    content: "";
-    flex-grow: 1;
-    height: 1px;
-    margin-left: 1.6rem;
+  background-color: var(--color-light-gray);
+  content: "";
+  flex-grow: 1;
+  height: 1px;
+  margin-left: 1.6rem;
 }
 
-
 @media (max-width: 767px) {
-    .site-content {
-        padding: 3rem 0;
-    }
+  .site-content {
+    padding: 3rem 0;
+  }
 }
