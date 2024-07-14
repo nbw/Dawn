@@ -24,7 +24,7 @@
 .gh-topic-pill {
   padding: 0.35rem 0.75rem 0.35rem 0.75rem;
   border: 1px solid var(--color-light-gray);
-  color: #333;
+  color: var(--primary-text-color);
   text-transform: lowercase;
   border-radius: 1rem;
   text-align: center;
@@ -36,14 +36,14 @@
   align-items: center;
 }
 .gh-topic-pill:hover {
-  border: 1pt solid #333;
+  border: 1pt solid var(--primary-text-color);
 }
 
 .gh-topic-pill .count {
   font-size: 8pt;
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   .gh-topic-pill {
     border: 1pt solid white;
     color: #fff;
@@ -51,7 +51,7 @@
   .theme-dark .gh-topic-pill:hover {
     border: 1pt solid #eee;
   }
-}
+} */
 
 .theme-dark .gh-topic-pill {
   border: 1pt solid white;
@@ -91,4 +91,9 @@
   .site-content {
     padding: 3rem 0;
   }
+}
+
+/* override default from try ghost */
+pre {
+  padding: 0 !important;
 }

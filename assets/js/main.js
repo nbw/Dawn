@@ -2,6 +2,7 @@ $(function () {
     'use strict';
     featured();
     pagination(false);
+    hljs.highlightAll();
 });
 
 function featured() {
@@ -27,3 +28,4 @@ function featured() {
         },
     });
 }
+
